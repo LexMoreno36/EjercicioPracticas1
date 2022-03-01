@@ -15,13 +15,13 @@
         <h4>Usuarios</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.LabelFor(model => model.IdCliente, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.IdCliente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.IdCliente, new { htmlAttributes = new { @id="clienteId", @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.IdCliente, "", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>*@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -50,7 +50,24 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Genero, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Genero, new { htmlAttributes = new { @class = "form-control" } })
+                @*<asp:DropDownList id="dropdownList">
+            <asp:ListItem Selected="True" Value="Masculino">Masculino</asp:ListItem>
+            <asp:ListItem Value="Femenino">Femenino</asp:ListItem
+            <asp:ListItem Value="Otro">Otro</asp:ListItem>
+        </asp:DropDownList>*@
+
+                @*@Html.EditorFor(model => model.Genero, new { htmlAttributes = new { @class = "form-control" } })*@
+
+                @*<select class="form-control" id="Genero" >
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="Otro">Otro</option>
+        </select>*@
+                <select class="form-control valid" id="Genero" name="Genero" aria-invalid="false">
+                    <option value="Masc">Masc</option>
+                    <option value="Fem">Fem</option>
+                    <option value="Otro">Otro</option>
+                </select>
                 @Html.ValidationMessageFor(model => model.Genero, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -74,7 +91,6 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

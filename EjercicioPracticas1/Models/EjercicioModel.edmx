@@ -28,7 +28,7 @@
           <Key>
             <PropertyRef Name="IdCliente" />
           </Key>
-          <Property Name="IdCliente" Type="int" Nullable="false" />
+          <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="text" Nullable="false" />
           <Property Name="Apellidos" Type="text" Nullable="false" />
           <Property Name="FechaNacimiento" Type="date" Nullable="false" />

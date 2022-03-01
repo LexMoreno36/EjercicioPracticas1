@@ -22,6 +22,9 @@ namespace EjercicioPracticas1.Models
     }
     public class DocVentasMetadata
     {
+        [Display(Name = "Numero del pedido")]
+        public string NumeroPedido;
+
         [Display(Name = "Estado del pedido")]
         public string EstadoPedido;
 
