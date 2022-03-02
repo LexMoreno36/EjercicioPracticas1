@@ -17,6 +17,7 @@ namespace EjercicioPracticas1.Controllers
         // GET: Usuarios
         public ActionResult Index()
         {
+            
             return View(db.Usuarios.ToList());
         }
 

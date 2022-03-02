@@ -19,15 +19,15 @@ namespace EjercicioPracticas1.Models
         {
             this.DocVentas = new HashSet<DocVentas>();
         }
-    
+        
         public int IdCliente { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public System.DateTime FechaNacimiento { get; set; }
         public string Genero { get; set; }
         public string Activo { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DocVentas> DocVentas { get; set; }
     }
 }

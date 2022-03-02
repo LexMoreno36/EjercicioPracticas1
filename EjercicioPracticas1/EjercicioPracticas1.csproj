@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -25,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -157,6 +159,7 @@
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>EjercicioModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModelViewUsuario\MVUsuario.cs" />
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>EjercicioModel.tt</DependentUpon>
     </Compile>
@@ -182,6 +185,104 @@
       <DependentUpon>EjercicioModel.edmx</DependentUpon>
       <LastGenOutput>EjercicioModel.cs</LastGenOutput>
     </Content>
+    <Content Include="node_modules\axios\dist\axios.js" />
+    <Content Include="node_modules\axios\dist\axios.min.js" />
+    <Content Include="node_modules\axios\index.js" />
+    <Content Include="node_modules\axios\lib\adapters\http.js" />
+    <Content Include="node_modules\axios\lib\adapters\xhr.js" />
+    <Content Include="node_modules\axios\lib\axios.js" />
+    <Content Include="node_modules\axios\lib\cancel\Cancel.js" />
+    <Content Include="node_modules\axios\lib\cancel\CancelToken.js" />
+    <Content Include="node_modules\axios\lib\cancel\isCancel.js" />
+    <Content Include="node_modules\axios\lib\core\Axios.js" />
+    <Content Include="node_modules\axios\lib\core\createError.js" />
+    <Content Include="node_modules\axios\lib\core\dispatchRequest.js" />
+    <Content Include="node_modules\axios\lib\core\enhanceError.js" />
+    <Content Include="node_modules\axios\lib\core\InterceptorManager.js" />
+    <Content Include="node_modules\axios\lib\core\settle.js" />
+    <Content Include="node_modules\axios\lib\core\transformData.js" />
+    <Content Include="node_modules\axios\lib\defaults.js" />
+    <Content Include="node_modules\axios\lib\helpers\bind.js" />
+    <Content Include="node_modules\axios\lib\helpers\btoa.js" />
+    <Content Include="node_modules\axios\lib\helpers\buildURL.js" />
+    <Content Include="node_modules\axios\lib\helpers\combineURLs.js" />
+    <Content Include="node_modules\axios\lib\helpers\cookies.js" />
+    <Content Include="node_modules\axios\lib\helpers\deprecatedMethod.js" />
+    <Content Include="node_modules\axios\lib\helpers\isAbsoluteURL.js" />
+    <Content Include="node_modules\axios\lib\helpers\isURLSameOrigin.js" />
+    <Content Include="node_modules\axios\lib\helpers\normalizeHeaderName.js" />
+    <Content Include="node_modules\axios\lib\helpers\parseHeaders.js" />
+    <Content Include="node_modules\axios\lib\helpers\spread.js" />
+    <Content Include="node_modules\axios\lib\utils.js" />
+    <Content Include="node_modules\debug\karma.conf.js" />
+    <Content Include="node_modules\debug\node.js" />
+    <Content Include="node_modules\debug\src\browser.js" />
+    <Content Include="node_modules\debug\src\debug.js" />
+    <Content Include="node_modules\debug\src\index.js" />
+    <Content Include="node_modules\debug\src\inspector-log.js" />
+    <Content Include="node_modules\debug\src\node.js" />
+    <Content Include="node_modules\follow-redirects\http.js" />
+    <Content Include="node_modules\follow-redirects\https.js" />
+    <Content Include="node_modules\follow-redirects\index.js" />
+    <Content Include="node_modules\ms\index.js" />
+    <Content Include="node_modules\vuetable-2\.postcssrc.js" />
+    <Content Include="node_modules\vuetable-2\build\build.js" />
+    <Content Include="node_modules\vuetable-2\build\check-versions.js" />
+    <Content Include="node_modules\vuetable-2\build\dev-client.js" />
+    <Content Include="node_modules\vuetable-2\build\dev-server.js" />
+    <Content Include="node_modules\vuetable-2\build\utils.js" />
+    <Content Include="node_modules\vuetable-2\build\vue-loader.conf.js" />
+    <Content Include="node_modules\vuetable-2\build\webpack.base.conf.js" />
+    <Content Include="node_modules\vuetable-2\build\webpack.build.config.js" />
+    <Content Include="node_modules\vuetable-2\build\webpack.dev.conf.js" />
+    <Content Include="node_modules\vuetable-2\build\webpack.prod.conf.js" />
+    <Content Include="node_modules\vuetable-2\build\webpack.test.conf.js" />
+    <Content Include="node_modules\vuetable-2\config\dev.env.js" />
+    <Content Include="node_modules\vuetable-2\config\index.js" />
+    <Content Include="node_modules\vuetable-2\config\prod.env.js" />
+    <Content Include="node_modules\vuetable-2\config\test.env.js" />
+    <Content Include="node_modules\vuetable-2\dist\index.html" />
+    <Content Include="node_modules\vuetable-2\dist\static\css\app.b37f8ca465bd00292017f950d4dbf8d5.css" />
+    <Content Include="node_modules\vuetable-2\dist\static\js\app.d7f1278f150e36aead77.js" />
+    <Content Include="node_modules\vuetable-2\dist\static\js\manifest.b8ce36897dd5ffa986f3.js" />
+    <Content Include="node_modules\vuetable-2\dist\static\js\vendor.4d021fa1b103853cdc00.js" />
+    <Content Include="node_modules\vuetable-2\dist\vuetable-2-full.js" />
+    <Content Include="node_modules\vuetable-2\dist\vuetable-2.js" />
+    <Content Include="node_modules\vuetable-2\index.html" />
+    <Content Include="node_modules\vuetable-2\src\assets\logo.png" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableCssSemanticUI.js" />
+    <Content Include="node_modules\vuetable-2\src\index.js" />
+    <Content Include="node_modules\vuetable-2\src\main.js" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\base.css" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\index.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\Vuetable.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetablePagination.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetablePaginationDropdown.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetablePaginationInfo.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetablePaginationInfoMixin.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetablePaginationMixin.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetableTable.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\components\VuetableTableRender.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\index.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\prettify.css" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\prettify.js" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\sort-arrow-sprite.png" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\sorter.js" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\index.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\Vuetable.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\VuetablePagination.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\VuetablePaginationDropdown.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\VuetablePaginationInfo.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\VuetablePaginationInfoMixin.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\components\VuetablePaginationMixin.vue.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\index.html" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov-report\src\index.js.html" />
+    <Content Include="node_modules\vuetable-2\test\Vuetable.AJAX.test.js" />
+    <Content Include="node_modules\vuetable-2\test\Vuetable.Computed.test.js" />
+    <Content Include="node_modules\vuetable-2\test\Vuetable.Features.test.js" />
+    <Content Include="node_modules\vuetable-2\test\Vuetable.FieldsDefinition.test.js" />
+    <Content Include="node_modules\vuetable-2\test\Vuetable.HTML.test.js" />
+    <Content Include="node_modules\vuetable-2\test\Vuetable.Methods.test.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\EjercicioModel.edmx">
@@ -191,6 +292,65 @@
     <Content Include="Models\EjercicioModel.edmx.diagram">
       <DependentUpon>EjercicioModel.edmx</DependentUpon>
     </Content>
+    <Content Include="node_modules\axios\CHANGELOG.md" />
+    <Content Include="node_modules\axios\dist\axios.map" />
+    <Content Include="node_modules\axios\dist\axios.min.map" />
+    <Content Include="node_modules\axios\lib\adapters\README.md" />
+    <Content Include="node_modules\axios\lib\core\README.md" />
+    <Content Include="node_modules\axios\lib\helpers\README.md" />
+    <Content Include="node_modules\axios\LICENSE" />
+    <Content Include="node_modules\axios\package.json" />
+    <Content Include="node_modules\axios\README.md" />
+    <Content Include="node_modules\axios\typings.json" />
+    <Content Include="node_modules\axios\UPGRADE_GUIDE.md" />
+    <Content Include="node_modules\debug\.coveralls.yml" />
+    <Content Include="node_modules\debug\.eslintrc" />
+    <Content Include="node_modules\debug\.npmignore" />
+    <Content Include="node_modules\debug\.travis.yml" />
+    <Content Include="node_modules\debug\CHANGELOG.md" />
+    <Content Include="node_modules\debug\component.json" />
+    <Content Include="node_modules\debug\LICENSE" />
+    <Content Include="node_modules\debug\Makefile" />
+    <Content Include="node_modules\debug\package.json" />
+    <Content Include="node_modules\debug\README.md" />
+    <Content Include="node_modules\follow-redirects\package.json" />
+    <Content Include="node_modules\follow-redirects\README.md" />
+    <Content Include="node_modules\ms\license.md" />
+    <Content Include="node_modules\ms\package.json" />
+    <Content Include="node_modules\ms\readme.md" />
+    <Content Include="node_modules\vuetable-2\.babelrc" />
+    <Content Include="node_modules\vuetable-2\.editorconfig" />
+    <Content Include="node_modules\vuetable-2\.eslintignore" />
+    <Content Include="node_modules\vuetable-2\changes.md" />
+    <Content Include="node_modules\vuetable-2\dist\static\css\app.b37f8ca465bd00292017f950d4dbf8d5.css.map" />
+    <Content Include="node_modules\vuetable-2\dist\static\js\app.d7f1278f150e36aead77.js.map" />
+    <Content Include="node_modules\vuetable-2\dist\static\js\manifest.b8ce36897dd5ffa986f3.js.map" />
+    <Content Include="node_modules\vuetable-2\dist\static\js\vendor.4d021fa1b103853cdc00.js.map" />
+    <Content Include="node_modules\vuetable-2\dist\stats.json" />
+    <Content Include="node_modules\vuetable-2\LICENSE" />
+    <Content Include="node_modules\vuetable-2\package.json" />
+    <Content Include="node_modules\vuetable-2\README.md" />
+    <Content Include="node_modules\vuetable-2\src\components\Vuetable.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableColGroup.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableColGutter.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableFieldCheckbox.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableFieldCheckboxMixin.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableFieldHandle.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableFieldMixin.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableFieldSequence.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetablePagination.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetablePaginationDropdown.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetablePaginationInfo.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetablePaginationInfoMixin.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetablePaginationMixin.vue" />
+    <Content Include="node_modules\vuetable-2\src\components\VuetableRowHeader.vue" />
+    <Content Include="node_modules\vuetable-2\static\.gitkeep" />
+    <Content Include="node_modules\vuetable-2\stats.json" />
+    <Content Include="node_modules\vuetable-2\test\unit\coverage\lcov.info" />
+    <Content Include="node_modules\vuetable-2\test\__snapshots__\Vuetable.HTML.test.js.snap" />
+    <Content Include="node_modules\vuetable-2\upgrade-guide.md" />
+    <Content Include="node_modules\vuetable-2\yarn.lock" />
+    <Content Include="node_modules\vuetable-2\_config.yml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -244,13 +404,18 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\axios\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
