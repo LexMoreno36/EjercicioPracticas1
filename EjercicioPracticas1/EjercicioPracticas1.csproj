@@ -134,8 +134,6 @@
     </Compile>
     <Compile Include="Models\DocVentas.cs" />
     <Compile Include="Models\EjercicioPracticas1DbContext.cs" />
-    <Compile Include="Models\PartialClasses.cs" />
-    <Compile Include="Models\Metadata.cs" />
     <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
