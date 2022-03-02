@@ -128,38 +128,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DocVentasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DocVentas.cs">
-      <DependentUpon>EjercicioModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EjercicioModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EjercicioModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EjercicioModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EjercicioModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EjercicioModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EjercicioModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Models\DocVentas.cs" />
+    <Compile Include="Models\EjercicioPracticas1DbContext.cs" />
     <Compile Include="Models\PartialClasses.cs" />
     <Compile Include="Models\Metadata.cs" />
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>EjercicioModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Usuarios.cs">
-      <DependentUpon>EjercicioModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,25 +149,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\EjercicioModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EjercicioModel.edmx</DependentUpon>
-      <LastGenOutput>EjercicioModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\EjercicioModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EjercicioModel.edmx</DependentUpon>
-      <LastGenOutput>EjercicioModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\EjercicioModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EjercicioModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\EjercicioModel.edmx.diagram">
-      <DependentUpon>EjercicioModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -214,18 +174,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\DocVentas\Create.cshtml" />
-    <Content Include="Views\DocVentas\Delete.cshtml" />
-    <Content Include="Views\DocVentas\Details.cshtml" />
-    <Content Include="Views\DocVentas\Edit.cshtml" />
-    <Content Include="Views\DocVentas\Index.cshtml" />
-    <Content Include="Views\Usuarios\Create.cshtml" />
-    <Content Include="Views\Usuarios\Delete.cshtml" />
-    <Content Include="Views\Usuarios\Details.cshtml" />
-    <Content Include="Views\Usuarios\Edit.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
-    <Content Include="Views\Usuarios\DetailsFromDocVentas.cshtml" />
-    <Content Include="Views\Usuarios\EditFromDocVentas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
