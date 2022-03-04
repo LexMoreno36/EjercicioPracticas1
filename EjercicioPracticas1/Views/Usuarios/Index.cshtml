@@ -6,7 +6,8 @@
 }
 
 <script>
-   let htmlJsonModel =  @Html.Raw(jsonModel);
+    let htmlJsonModel =  @Html.Raw(jsonModel);
+    console.log(htmlJsonModel);
 </script>
 
 <h2>Index</h2>
@@ -14,6 +15,30 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<table class="table" id="app">
+    <tr>
+        <td v-for="data in datas">{{data.Nombre}}</td>
+    </tr>
+</table>
+
+<script>
+
+    var app = new Vue({
+        created() {
+            this.datas = htmlJsonModel
+        },
+        el: '#app',
+        data: {
+            datas: [
+
+            ]
+            //datas: [
+            //    'hola','hola2', 'hola3'
+            //]
+        }
+    })
+</script>
 
 @* habría que coger el htmlJsonModel, que es un json y pasarlo a una tabla con vue, mediante el v-for o algo así... *@
 

@@ -6,10 +6,10 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue@2"></script>
     <link rel="stylesheet" href="~/Content/StyleSheet.css">
 </head>
-<body >
+<body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -20,11 +20,11 @@
                 </button>
                 @Html.ActionLink("Ejercicio Practicas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse" id="app">
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Usuarios", "Index", "Usuarios")</li>
                     <li>@Html.ActionLink("Documentos  de ventas", "Index", "DocVentas")</li>
-                    <li>{{ message }}</li>
+
                 </ul>
             </div>
         </div>
@@ -32,6 +32,11 @@
     <div class="container body-content">
         <br />
         <br />
+
+        @*<ul id="app">
+                  <li v-for="data in datas">{{data}}</li>
+            </ul>*@
+
         @RenderBody()
 
     </div>
@@ -39,17 +44,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-<footer>
-    <script>
-
-        Vue.createApp({
-            data() {
-                return {
-                    message: 'Hello Vue!'
-                }
-            }
-        }).mount('#app')
-    </script>
-</footer>
+    <footer>
+    </footer>
 </body>
 </html>
